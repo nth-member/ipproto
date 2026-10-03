@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IPPROTO</title>
+<meta name="description" content="The 256 IP protocol numbers in 13 categories: a map of IANA's registry, a capture reader for tcpdump files, a teletype-to-packet bridge and an 8-bit colour encoding. Everything runs in the page.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232a78d6'/%3E%3Ctext x='32' y='43' font-size='26' text-anchor='middle' font-family='monospace' font-weight='700' fill='white'%3EIP%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>IPPROTO</h1>
+  <p class="sub">The one-byte Protocol field of every IP packet names what the packet carries. Here are all 256 values, from IANA's registry, in 13 categories. A capture file from tcpdump is read entirely in this page; nothing is uploaded.</p>
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-tab="map" aria-selected="true">Map</button>
+    <button role="tab" data-tab="capture" aria-selected="false">Capture</button>
+    <button role="tab" data-tab="bridge" aria-selected="false">Bridge</button>
+    <button role="tab" data-tab="colours" aria-selected="false">Colours</button>
+  </nav>
+</header>
+
+<div class="chips" id="chips" role="group" aria-label="Category filter"></div>
+
+<!-- MAP -->
+<section class="panel" data-panel="map">
+  <div class="row between">
+    <div class="legend" id="statusLegend" aria-label="Status"></div>
+    <input id="search" type="search" placeholder="Find a number or keyword" autocomplete="off" spellcheck="false">
+  </div>
+  <div class="grid" id="grid" role="grid" aria-label="Protocol numbers 0 to 255"></div>
+  <div class="detail" id="detail"></div>
+  <p class="note" id="regNote"></p>
+  <details class="adv"><summary>All 256 numbers as a table</summary><div class="table-wrap"><table class="tbl" id="regTable"></table></div></details>
+</section>
+
+<!-- CAPTURE -->
+<section class="panel" data-panel="capture" hidden>
+  <p class="lede">Open a capture file made with tcpdump or Wireshark (<code>.pcap</code> or <code>.pcapng</code>). The file is read in this page and never uploaded. To make one:</p>
+  <pre class="mono cmd">sudo tcpdump -i any -nn -w capture.pcap        # Ctrl+C to stop</pre>
+  <div class="row">
+    <label class="file"><input id="capFile" type="file" accept=".pcap,.pcapng,.cap,application/vnd.tcpdump.pcap"><span>Open capture…</span></label>
+    <span class="note" id="capName"></span>
+  </div>
+  <div class="status" id="capStatus" aria-live="polite"></div>
+  <div id="capOut" hidden>
+    <div class="tiles" id="capTiles"></div>
+    <h3>Flags</h3><ul class="flags" id="capFlags"></ul>
+    <h3>Categories <span class="muted">packets containing a protocol of each category · click to filter</span></h3>
+    <div class="bars" id="capCats"></div>
+    <h3>Over time <span class="muted" id="tlNote"></span></h3>
+    <div class="timeline" id="capTimeline"></div>
+    <h3>Protocol numbers</h3>
+    <div class="table-wrap"><table class="tbl" id="capProtos"></table></div>
+    <div class="split">
+      <div><h3>Tunnels opened</h3><ul class="plain" id="capTunnels"></ul><h3>IPv6 extension headers</h3><ul class="plain" id="capExt"></ul></div>
+      <div><h3>Not IP</h3><ul class="plain" id="capNonIp"></ul><h3>Capture</h3><ul class="plain" id="capMeta"></ul></div>
+    </div>
+    <h3>Busiest address pairs <span class="muted">outermost header, by bytes</span></h3>
+    <div class="table-wrap"><table class="tbl" id="capTalkers"></table></div>
+  </div>
+</section>
+
+<!-- BRIDGE -->
+<section class="panel" data-panel="bridge" hidden>
+  <p class="lede">A 1971 Teletype test stream cut into packets, each carried by an IP protocol number, saved as a <code>.pcap</code> file that tcpdump and Wireshark open. Packets are timed at the machine's speed: 10 characters a second for the Model 33, 15 for the Model 37.</p>
+  <div class="form">
+    <label class="field"><span>Teletype</span><select id="bModel"><option value="asr33">Model 33 ASR</option><option value="asr37">Model 37 ASR</option></select></label>
+    <label class="field"><span>Protocols</span><select id="bWhich"></select></label>
+    <label class="field" id="bNumWrap" hidden><span>Number</span><input id="bNum" inputmode="numeric" value="253"></label>
+    <label class="field"><span>Stream size</span><select id="bSize"><option value="16384">16 KiB</option><option value="65536" selected>64 KiB</option><option value="262144">256 KiB</option><option value="1048576">1 MiB</option></select></label>
+    <label class="field"><span>Bytes per packet</span><input id="bChunk" inputmode="numeric" value="72"></label>
+    <label class="field"><span>Seed</span><input id="bSeed" inputmode="numeric" placeholder="random"></label>
+  </div>
+  <div class="row"><button class="go" id="bGo">Build capture</button></div>
+  <div class="status" id="bStatus" aria-live="polite"></div>
+  <div class="row" id="bOut" hidden>
+    <button class="ghost" id="bSave">Download .pcap</button>
+    <button class="ghost" id="bAnalyse">Open in Capture</button>
+    <code class="note" id="bCmd"></code>
+  </div>
+  <details class="adv"><summary>How each protocol is framed</summary>
+    <ul class="plain small">
+      <li><b>Structured:</b> TCP (6) to port 23, Telnet; UDP (17) and ICMP (1) echo; ICMPv6 (58) echo.</li>
+      <li><b>Tunnels around an inner UDP packet:</b> IP-in-IP (4, 94), IPv6-in-IP (41), GRE (47), EtherIP (97), Ethernet (143), MPLS-in-IP (137).</li>
+      <li><b>Security:</b> ESP (50) with SPI and sequence number; AH (51) followed by UDP.</li>
+      <li><b>IPv6 chains:</b> Hop-by-Hop (0), Routing (43), Fragment (44), Destination Options (60) and Shim6 (140) followed by UDP; No Next Header (59); Mobility (135) and HIP (139) with no next header.</li>
+      <li><b>Every other number</b> carries the teletype bytes directly after an IPv4 header. tcpdump may try to read those bytes as that protocol's header and report a bad checksum; that is expected.</li>
+      <li>Addresses come from the documentation ranges: 192.0.2.0/24, 198.51.100.0/24, 203.0.113.0/24, 2001:db8::/32. Timestamps start on 1 June 1971, 09:00 UTC.</li>
+    </ul>
+  </details>
+</section>
+
+<!-- COLOURS -->
+<section class="panel" data-panel="colours" hidden>
+  <p class="lede">Each protocol number as a coloured SPAN, by an 8-bit extension of Gigaspeak's Calc28 scheme: bit 7 sets the foreground base to <code>55</code>, as bit 3 does for the background. Numbers 0–127 have exactly Gigaspeak's colours; all 256 pairs are distinct. This extension is IPPROTO's own, not part of MDQNM.</p>
+  <div class="chart8" id="key8" aria-label="256 colours"></div>
+  <div class="form">
+    <label class="field"><span>Sequence</span><select id="cSource"><option value="registry">Registry, 0–255</option><option value="capture" disabled>Loaded capture: carried protocol per packet</option></select></label>
+  </div>
+  <div class="status" id="cStatus"></div>
+  <div class="preview" id="cPreview"></div>
+  <div class="row">
+    <button class="ghost" id="cSave">Download .HTM</button>
+    <button class="ghost" id="cGiga">Open the keywords in Gigaspeak ↗</button>
+    <span class="note" id="cGigaNote"></span>
+  </div>
+</section>
+
+<footer class="foot">Data: IANA, <a href="https://www.iana.org/assignments/protocol-numbers/">Assigned Internet Protocol Numbers</a> <span id="footUpdated"></span>. The 13 categories are this site's grouping. Part of <a href="https://nth-member.github.io/">nth-member</a>.</footer>
+</div>
+<script type="module" src="app.mjs"></script>
+</body>
+</html>

@@ -1,0 +1,2472 @@
+{
+ "source": "IANA, Assigned Internet Protocol Numbers",
+ "url": "https://www.iana.org/assignments/protocol-numbers/",
+ "updated": "2026-03-09",
+ "csvSha256": "e704ee14e69347681b3a6271af02195a9741236074fc311449ebb032101bdf2c",
+ "categories": [
+  {
+   "id": "core",
+   "title": "Core control and IPv6 machinery"
+  },
+  {
+   "id": "transport",
+   "title": "Transport protocols"
+  },
+  {
+   "id": "routing",
+   "title": "Routing and router redundancy"
+  },
+  {
+   "id": "multicast",
+   "title": "Multicast"
+  },
+  {
+   "id": "tunnel",
+   "title": "Tunnelling and encapsulation"
+  },
+  {
+   "id": "security",
+   "title": "Security and encryption"
+  },
+  {
+   "id": "mobility",
+   "title": "Mobility and multihoming"
+  },
+  {
+   "id": "qos",
+   "title": "Quality of service, label switching, compression"
+  },
+  {
+   "id": "resolution",
+   "title": "Address resolution"
+  },
+  {
+   "id": "monitoring",
+   "title": "Monitoring and measurement"
+  },
+  {
+   "id": "arpa",
+   "title": "Early ARPA/DARPA research networks"
+  },
+  {
+   "id": "vendor",
+   "title": "Vendor and non-IP network stacks"
+  },
+  {
+   "id": "special",
+   "title": "Placeholders, experiments, reserved, unassigned"
+  }
+ ],
+ "numbers": [
+  {
+   "n": 0,
+   "keyword": "HOPOPT",
+   "description": "IPv6 Hop-by-Hop Option",
+   "category": "core",
+   "status": "common",
+   "ipv6ExtensionHeader": true,
+   "rfcs": [
+    8200
+   ]
+  },
+  {
+   "n": 1,
+   "keyword": "ICMP",
+   "description": "Internet Control Message",
+   "category": "core",
+   "status": "common",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    792
+   ]
+  },
+  {
+   "n": 2,
+   "keyword": "IGMP",
+   "description": "Internet Group Management",
+   "category": "core",
+   "status": "common",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    1112
+   ]
+  },
+  {
+   "n": 3,
+   "keyword": "GGP",
+   "description": "Gateway-to-Gateway",
+   "category": "routing",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    823
+   ]
+  },
+  {
+   "n": 4,
+   "keyword": "IPv4",
+   "description": "IPv4 encapsulation",
+   "category": "tunnel",
+   "status": "common",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    2003
+   ]
+  },
+  {
+   "n": 5,
+   "keyword": "ST",
+   "description": "Stream",
+   "category": "arpa",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    1190,
+    1819
+   ]
+  },
+  {
+   "n": 6,
+   "keyword": "TCP",
+   "description": "Transmission Control",
+   "category": "transport",
+   "status": "common",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    9293
+   ]
+  },
+  {
+   "n": 7,
+   "keyword": "CBT",
+   "description": "CBT",
+   "category": "multicast",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 8,
+   "keyword": "EGP",
+   "description": "Exterior Gateway Protocol",
+   "category": "routing",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    888
+   ]
+  },
+  {
+   "n": 9,
+   "keyword": "IGP",
+   "description": "any private interior gateway (used by Cisco for their IGRP)",
+   "category": "routing",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 10,
+   "keyword": "BBN-RCC-MON",
+   "description": "BBN RCC Monitoring",
+   "category": "monitoring",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 11,
+   "keyword": "NVP-II",
+   "description": "Network Voice Protocol",
+   "category": "arpa",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    741
+   ]
+  },
+  {
+   "n": 12,
+   "keyword": "PUP",
+   "description": "PUP",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 13,
+   "keyword": "ARGUS",
+   "description": "ARGUS",
+   "category": "monitoring",
+   "status": "deprecated",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 14,
+   "keyword": "EMCON",
+   "description": "EMCON",
+   "category": "arpa",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 15,
+   "keyword": "XNET",
+   "description": "Cross Net Debugger",
+   "category": "monitoring",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 16,
+   "keyword": "CHAOS",
+   "description": "Chaos",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 17,
+   "keyword": "UDP",
+   "description": "User Datagram",
+   "category": "transport",
+   "status": "common",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    768
+   ]
+  },
+  {
+   "n": 18,
+   "keyword": "MUX",
+   "description": "Multiplexing",
+   "category": "transport",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 19,
+   "keyword": "DCN-MEAS",
+   "description": "DCN Measurement Subsystems",
+   "category": "monitoring",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 20,
+   "keyword": "HMP",
+   "description": "Host Monitoring",
+   "category": "monitoring",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    869
+   ]
+  },
+  {
+   "n": 21,
+   "keyword": "PRM",
+   "description": "Packet Radio Measurement",
+   "category": "monitoring",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 22,
+   "keyword": "XNS-IDP",
+   "description": "XEROX NS IDP",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 23,
+   "keyword": "TRUNK-1",
+   "description": "Trunk-1",
+   "category": "arpa",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 24,
+   "keyword": "TRUNK-2",
+   "description": "Trunk-2",
+   "category": "arpa",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 25,
+   "keyword": "LEAF-1",
+   "description": "Leaf-1",
+   "category": "arpa",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 26,
+   "keyword": "LEAF-2",
+   "description": "Leaf-2",
+   "category": "arpa",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 27,
+   "keyword": "RDP",
+   "description": "Reliable Data Protocol",
+   "category": "transport",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    908
+   ]
+  },
+  {
+   "n": 28,
+   "keyword": "IRTP",
+   "description": "Internet Reliable Transaction",
+   "category": "transport",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    938
+   ]
+  },
+  {
+   "n": 29,
+   "keyword": "ISO-TP4",
+   "description": "ISO Transport Protocol Class 4",
+   "category": "transport",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    905
+   ]
+  },
+  {
+   "n": 30,
+   "keyword": "NETBLT",
+   "description": "Bulk Data Transfer Protocol",
+   "category": "transport",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    969
+   ]
+  },
+  {
+   "n": 31,
+   "keyword": "MFE-NSP",
+   "description": "MFE Network Services Protocol",
+   "category": "arpa",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 32,
+   "keyword": "MERIT-INP",
+   "description": "MERIT Internodal Protocol",
+   "category": "arpa",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 33,
+   "keyword": "DCCP",
+   "description": "Datagram Congestion Control Protocol",
+   "category": "transport",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    4340
+   ]
+  },
+  {
+   "n": 34,
+   "keyword": "3PC",
+   "description": "Third Party Connect Protocol",
+   "category": "transport",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 35,
+   "keyword": "IDPR",
+   "description": "Inter-Domain Policy Routing Protocol",
+   "category": "routing",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 36,
+   "keyword": "XTP",
+   "description": "XTP",
+   "category": "transport",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 37,
+   "keyword": "DDP",
+   "description": "Datagram Delivery Protocol",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 38,
+   "keyword": "IDPR-CMTP",
+   "description": "IDPR Control Message Transport Proto",
+   "category": "routing",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 39,
+   "keyword": "TP++",
+   "description": "TP++ Transport Protocol",
+   "category": "transport",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 40,
+   "keyword": "IL",
+   "description": "IL Transport Protocol",
+   "category": "transport",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 41,
+   "keyword": "IPv6",
+   "description": "IPv6 encapsulation",
+   "category": "tunnel",
+   "status": "common",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    2473
+   ]
+  },
+  {
+   "n": 42,
+   "keyword": "SDRP",
+   "description": "Source Demand Routing Protocol",
+   "category": "routing",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 43,
+   "keyword": "IPv6-Route",
+   "description": "Routing Header for IPv6",
+   "category": "core",
+   "status": "common",
+   "ipv6ExtensionHeader": true,
+   "rfcs": []
+  },
+  {
+   "n": 44,
+   "keyword": "IPv6-Frag",
+   "description": "Fragment Header for IPv6",
+   "category": "core",
+   "status": "common",
+   "ipv6ExtensionHeader": true,
+   "rfcs": []
+  },
+  {
+   "n": 45,
+   "keyword": "IDRP",
+   "description": "Inter-Domain Routing Protocol",
+   "category": "routing",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 46,
+   "keyword": "RSVP",
+   "description": "Reservation Protocol",
+   "category": "qos",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    2205,
+    3209
+   ]
+  },
+  {
+   "n": 47,
+   "keyword": "GRE",
+   "description": "Generic Routing Encapsulation",
+   "category": "tunnel",
+   "status": "common",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    2784
+   ]
+  },
+  {
+   "n": 48,
+   "keyword": "DSR",
+   "description": "Dynamic Source Routing Protocol",
+   "category": "routing",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    4728
+   ]
+  },
+  {
+   "n": 49,
+   "keyword": "BNA",
+   "description": "BNA",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 50,
+   "keyword": "ESP",
+   "description": "Encap Security Payload",
+   "category": "security",
+   "status": "common",
+   "ipv6ExtensionHeader": true,
+   "rfcs": [
+    4303
+   ]
+  },
+  {
+   "n": 51,
+   "keyword": "AH",
+   "description": "Authentication Header",
+   "category": "security",
+   "status": "common",
+   "ipv6ExtensionHeader": true,
+   "rfcs": [
+    4302
+   ]
+  },
+  {
+   "n": 52,
+   "keyword": "I-NLSP",
+   "description": "Integrated Net Layer Security TUBA",
+   "category": "security",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 53,
+   "keyword": "SWIPE",
+   "description": "IP with Encryption",
+   "category": "security",
+   "status": "deprecated",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 54,
+   "keyword": "NARP",
+   "description": "NBMA Address Resolution Protocol",
+   "category": "resolution",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    1735
+   ]
+  },
+  {
+   "n": 55,
+   "keyword": "Min-IPv4",
+   "description": "Minimal IPv4 Encapsulation",
+   "category": "tunnel",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    2004
+   ]
+  },
+  {
+   "n": 56,
+   "keyword": "TLSP",
+   "description": "Transport Layer Security Protocol using Kryptonet key management",
+   "category": "security",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 57,
+   "keyword": "SKIP",
+   "description": "SKIP",
+   "category": "security",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 58,
+   "keyword": "IPv6-ICMP",
+   "description": "ICMP for IPv6",
+   "category": "core",
+   "status": "common",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    8200
+   ]
+  },
+  {
+   "n": 59,
+   "keyword": "IPv6-NoNxt",
+   "description": "No Next Header for IPv6",
+   "category": "core",
+   "status": "common",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    8200
+   ]
+  },
+  {
+   "n": 60,
+   "keyword": "IPv6-Opts",
+   "description": "Destination Options for IPv6",
+   "category": "core",
+   "status": "common",
+   "ipv6ExtensionHeader": true,
+   "rfcs": [
+    8200
+   ]
+  },
+  {
+   "n": 61,
+   "keyword": "",
+   "description": "any host internal protocol",
+   "category": "special",
+   "status": "placeholder",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 62,
+   "keyword": "CFTP",
+   "description": "CFTP",
+   "category": "arpa",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 63,
+   "keyword": "",
+   "description": "any local network",
+   "category": "special",
+   "status": "placeholder",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 64,
+   "keyword": "SAT-EXPAK",
+   "description": "SATNET and Backroom EXPAK",
+   "category": "arpa",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 65,
+   "keyword": "KRYPTOLAN",
+   "description": "Kryptolan",
+   "category": "security",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 66,
+   "keyword": "RVD",
+   "description": "MIT Remote Virtual Disk Protocol",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 67,
+   "keyword": "IPPC",
+   "description": "Internet Pluribus Packet Core",
+   "category": "arpa",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 68,
+   "keyword": "",
+   "description": "any distributed file system",
+   "category": "special",
+   "status": "placeholder",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 69,
+   "keyword": "SAT-MON",
+   "description": "SATNET Monitoring",
+   "category": "monitoring",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 70,
+   "keyword": "VISA",
+   "description": "VISA Protocol",
+   "category": "security",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 71,
+   "keyword": "IPCV",
+   "description": "Internet Packet Core Utility",
+   "category": "arpa",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 72,
+   "keyword": "CPNX",
+   "description": "Computer Protocol Network Executive",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 73,
+   "keyword": "CPHB",
+   "description": "Computer Protocol Heart Beat",
+   "category": "monitoring",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 74,
+   "keyword": "WSN",
+   "description": "Wang Span Network",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 75,
+   "keyword": "PVP",
+   "description": "Packet Video Protocol",
+   "category": "arpa",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 76,
+   "keyword": "BR-SAT-MON",
+   "description": "Backroom SATNET Monitoring",
+   "category": "monitoring",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 77,
+   "keyword": "SUN-ND",
+   "description": "SUN ND PROTOCOL-Temporary",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 78,
+   "keyword": "WB-MON",
+   "description": "WIDEBAND Monitoring",
+   "category": "monitoring",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 79,
+   "keyword": "WB-EXPAK",
+   "description": "WIDEBAND EXPAK",
+   "category": "arpa",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 80,
+   "keyword": "ISO-IP",
+   "description": "ISO Internet Protocol",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 81,
+   "keyword": "VMTP",
+   "description": "VMTP",
+   "category": "transport",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 82,
+   "keyword": "SECURE-VMTP",
+   "description": "SECURE-VMTP",
+   "category": "transport",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 83,
+   "keyword": "VINES",
+   "description": "VINES",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 84,
+   "keyword": "IPTM",
+   "description": "Internet Protocol Traffic Manager",
+   "category": "qos",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 85,
+   "keyword": "NSFNET-IGP",
+   "description": "NSFNET-IGP",
+   "category": "routing",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 86,
+   "keyword": "DGP",
+   "description": "Dissimilar Gateway Protocol",
+   "category": "routing",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 87,
+   "keyword": "TCF",
+   "description": "TCF",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 88,
+   "keyword": "EIGRP",
+   "description": "EIGRP",
+   "category": "routing",
+   "status": "common",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    7868
+   ]
+  },
+  {
+   "n": 89,
+   "keyword": "OSPFIGP",
+   "description": "OSPFIGP",
+   "category": "routing",
+   "status": "common",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    1583,
+    2328,
+    5340
+   ]
+  },
+  {
+   "n": 90,
+   "keyword": "Sprite-RPC",
+   "description": "Sprite RPC Protocol",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 91,
+   "keyword": "LARP",
+   "description": "Locus Address Resolution Protocol",
+   "category": "resolution",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 92,
+   "keyword": "MTP",
+   "description": "Multicast Transport Protocol",
+   "category": "transport",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 93,
+   "keyword": "AX.25",
+   "description": "AX.25 Frames",
+   "category": "tunnel",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 94,
+   "keyword": "IPIP",
+   "description": "IP-within-IP Encapsulation Protocol",
+   "category": "tunnel",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 95,
+   "keyword": "MICP",
+   "description": "Mobile Internetworking Control Pro.",
+   "category": "mobility",
+   "status": "deprecated",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 96,
+   "keyword": "SCC-SP",
+   "description": "Semaphore Communications Sec. Pro.",
+   "category": "security",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 97,
+   "keyword": "ETHERIP",
+   "description": "Ethernet-within-IP Encapsulation",
+   "category": "tunnel",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    3378
+   ]
+  },
+  {
+   "n": 98,
+   "keyword": "ENCAP",
+   "description": "Encapsulation Header",
+   "category": "tunnel",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    1241
+   ]
+  },
+  {
+   "n": 99,
+   "keyword": "",
+   "description": "any private encryption scheme",
+   "category": "special",
+   "status": "placeholder",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 100,
+   "keyword": "GMTP",
+   "description": "GMTP",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 101,
+   "keyword": "IFMP",
+   "description": "Ipsilon Flow Management Protocol",
+   "category": "qos",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 102,
+   "keyword": "PNNI",
+   "description": "PNNI over IP",
+   "category": "tunnel",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 103,
+   "keyword": "PIM",
+   "description": "Protocol Independent Multicast",
+   "category": "multicast",
+   "status": "common",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    7761
+   ]
+  },
+  {
+   "n": 104,
+   "keyword": "ARIS",
+   "description": "ARIS",
+   "category": "qos",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 105,
+   "keyword": "SCPS",
+   "description": "SCPS",
+   "category": "transport",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 106,
+   "keyword": "QNX",
+   "description": "QNX",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 107,
+   "keyword": "A/N",
+   "description": "Active Networks",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 108,
+   "keyword": "IPComp",
+   "description": "IP Payload Compression Protocol",
+   "category": "qos",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    2393
+   ]
+  },
+  {
+   "n": 109,
+   "keyword": "SNP",
+   "description": "Sitara Networks Protocol",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 110,
+   "keyword": "Compaq-Peer",
+   "description": "Compaq Peer Protocol",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 111,
+   "keyword": "IPX-in-IP",
+   "description": "IPX in IP",
+   "category": "tunnel",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 112,
+   "keyword": "VRRP",
+   "description": "Virtual Router Redundancy Protocol",
+   "category": "routing",
+   "status": "common",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    9568
+   ]
+  },
+  {
+   "n": 113,
+   "keyword": "PGM",
+   "description": "PGM Reliable Transport Protocol",
+   "category": "transport",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 114,
+   "keyword": "",
+   "description": "any 0-hop protocol",
+   "category": "special",
+   "status": "placeholder",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 115,
+   "keyword": "L2TP",
+   "description": "Layer Two Tunneling Protocol",
+   "category": "tunnel",
+   "status": "common",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    3931
+   ]
+  },
+  {
+   "n": 116,
+   "keyword": "DDX",
+   "description": "D-II Data Exchange (DDX)",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 117,
+   "keyword": "IATP",
+   "description": "Interactive Agent Transfer Protocol",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 118,
+   "keyword": "STP",
+   "description": "Schedule Transfer Protocol",
+   "category": "transport",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 119,
+   "keyword": "SRP",
+   "description": "SpectraLink Radio Protocol",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 120,
+   "keyword": "UTI",
+   "description": "UTI",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 121,
+   "keyword": "SMP",
+   "description": "Simple Message Protocol",
+   "category": "transport",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 122,
+   "keyword": "SM",
+   "description": "Simple Multicast Protocol",
+   "category": "multicast",
+   "status": "deprecated",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 123,
+   "keyword": "PTP",
+   "description": "Performance Transparency Protocol",
+   "category": "transport",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 124,
+   "keyword": "ISIS over IPv4",
+   "description": "ISIS over IPv4",
+   "category": "routing",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 125,
+   "keyword": "FIRE",
+   "description": "FIRE",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 126,
+   "keyword": "CRTP",
+   "description": "Combat Radio Transport Protocol",
+   "category": "transport",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 127,
+   "keyword": "CRUDP",
+   "description": "Combat Radio User Datagram",
+   "category": "transport",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 128,
+   "keyword": "SSCOPMCE",
+   "description": "SSCOPMCE",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 129,
+   "keyword": "IPLT",
+   "description": "IPLT",
+   "category": "vendor",
+   "status": "historic",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 130,
+   "keyword": "SPS",
+   "description": "Secure Packet Shield",
+   "category": "security",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 131,
+   "keyword": "PIPE",
+   "description": "Private IP Encapsulation within IP",
+   "category": "tunnel",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 132,
+   "keyword": "SCTP",
+   "description": "Stream Control Transmission Protocol",
+   "category": "transport",
+   "status": "common",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 133,
+   "keyword": "FC",
+   "description": "Fibre Channel",
+   "category": "tunnel",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    6172
+   ]
+  },
+  {
+   "n": 134,
+   "keyword": "RSVP-E2E-IGNORE",
+   "description": "RSVP-E2E-IGNORE",
+   "category": "qos",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    3175
+   ]
+  },
+  {
+   "n": 135,
+   "keyword": "Mobility Header",
+   "description": "Mobility Header",
+   "category": "mobility",
+   "status": "assigned",
+   "ipv6ExtensionHeader": true,
+   "rfcs": [
+    6275
+   ]
+  },
+  {
+   "n": 136,
+   "keyword": "UDPLite",
+   "description": "UDPLite",
+   "category": "transport",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    3828
+   ]
+  },
+  {
+   "n": 137,
+   "keyword": "MPLS-in-IP",
+   "description": "MPLS-in-IP",
+   "category": "tunnel",
+   "status": "common",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    4023
+   ]
+  },
+  {
+   "n": 138,
+   "keyword": "manet",
+   "description": "MANET Protocols",
+   "category": "routing",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    5498
+   ]
+  },
+  {
+   "n": 139,
+   "keyword": "HIP",
+   "description": "Host Identity Protocol",
+   "category": "mobility",
+   "status": "assigned",
+   "ipv6ExtensionHeader": true,
+   "rfcs": [
+    7401
+   ]
+  },
+  {
+   "n": 140,
+   "keyword": "Shim6",
+   "description": "Shim6 Protocol",
+   "category": "mobility",
+   "status": "assigned",
+   "ipv6ExtensionHeader": true,
+   "rfcs": [
+    5533
+   ]
+  },
+  {
+   "n": 141,
+   "keyword": "WESP",
+   "description": "Wrapped Encapsulating Security Payload",
+   "category": "security",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    5840
+   ]
+  },
+  {
+   "n": 142,
+   "keyword": "ROHC",
+   "description": "Robust Header Compression",
+   "category": "qos",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    5858
+   ]
+  },
+  {
+   "n": 143,
+   "keyword": "Ethernet",
+   "description": "Ethernet",
+   "category": "tunnel",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    8986
+   ]
+  },
+  {
+   "n": 144,
+   "keyword": "AGGFRAG",
+   "description": "AGGFRAG encapsulation payload for ESP",
+   "category": "tunnel",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    9347
+   ]
+  },
+  {
+   "n": 145,
+   "keyword": "NSH",
+   "description": "Network Service Header",
+   "category": "tunnel",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": [
+    9491
+   ]
+  },
+  {
+   "n": 146,
+   "keyword": "Homa",
+   "description": "Homa",
+   "category": "transport",
+   "status": "assigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 147,
+   "keyword": "BIT-EMU",
+   "description": "Bit-stream Emulation",
+   "category": "tunnel",
+   "status": "assigned",
+   "ipv6ExtensionHeader": true,
+   "rfcs": [
+    9801
+   ]
+  },
+  {
+   "n": 148,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 149,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 150,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 151,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 152,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 153,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 154,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 155,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 156,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 157,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 158,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 159,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 160,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 161,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 162,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 163,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 164,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 165,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 166,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 167,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 168,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 169,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 170,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 171,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 172,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 173,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 174,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 175,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 176,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 177,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 178,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 179,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 180,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 181,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 182,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 183,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 184,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 185,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 186,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 187,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 188,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 189,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 190,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 191,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 192,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 193,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 194,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 195,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 196,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 197,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 198,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 199,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 200,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 201,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 202,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 203,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 204,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 205,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 206,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 207,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 208,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 209,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 210,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 211,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 212,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 213,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 214,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 215,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 216,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 217,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 218,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 219,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 220,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 221,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 222,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 223,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 224,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 225,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 226,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 227,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 228,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 229,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 230,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 231,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 232,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 233,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 234,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 235,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 236,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 237,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 238,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 239,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 240,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 241,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 242,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 243,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 244,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 245,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 246,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 247,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 248,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 249,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 250,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 251,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 252,
+   "keyword": "",
+   "description": "Unassigned",
+   "category": "special",
+   "status": "unassigned",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  },
+  {
+   "n": 253,
+   "keyword": "",
+   "description": "Use for experimentation and testing",
+   "category": "special",
+   "status": "experimental",
+   "ipv6ExtensionHeader": true,
+   "rfcs": [
+    3692
+   ]
+  },
+  {
+   "n": 254,
+   "keyword": "",
+   "description": "Use for experimentation and testing",
+   "category": "special",
+   "status": "experimental",
+   "ipv6ExtensionHeader": true,
+   "rfcs": [
+    3692
+   ]
+  },
+  {
+   "n": 255,
+   "keyword": "Reserved",
+   "description": "Reserved",
+   "category": "special",
+   "status": "reserved",
+   "ipv6ExtensionHeader": false,
+   "rfcs": []
+  }
+ ]
+}

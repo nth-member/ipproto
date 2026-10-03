@@ -1,0 +1,12 @@
+{
+  "name": "ipproto",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The 256 IP protocol numbers in 13 categories: a registry map, a capture reader, a teletype-to-packet bridge and an 8-bit colour encoding, as one static site.",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "test": "node --test test/*.test.mjs"
+  }
+}
