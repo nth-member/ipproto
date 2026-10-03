@@ -117,22 +117,40 @@ export function buildData(csvText, updated) {
   };
 }
 
+// One retry after a pause: IANA's servers answer 503 now and then.
 async function fetchText(url) {
-  const r = await fetch(url);
-  if (!r.ok) throw new Error(`${url} returned HTTP ${r.status}`);
-  return r.text();
+  for (let attempt = 1; ; attempt += 1) {
+    try {
+      const r = await fetch(url);
+      if (!r.ok) throw new Error(`${url} returned HTTP ${r.status}`);
+      return await r.text();
+    } catch (error) {
+      if (attempt >= 2) throw error;
+      await new Promise(resolve => setTimeout(resolve, 5000));
+    }
+  }
 }
 
 const isMain = process.argv[1] && import.meta.url.endsWith(process.argv[1].split("/").pop());
 if (isMain) {
-  const csv = process.argv[2] ? await readFile(process.argv[2], "utf8") : await fetchText(CSV_URL);
-  let updated = null;
-  try { updated = (await fetchText(XML_URL)).match(/<updated>([^<]+)<\/updated>/)?.[1] ?? null; } catch { /* offline: no date */ }
-  const data = buildData(csv, updated);
-  const out = new URL("../docs/data/protocols.json", import.meta.url);
-  const text = JSON.stringify(data, null, 1) + "\n";
-  let old = "";
-  try { old = await readFile(out, "utf8"); } catch { /* first build */ }
-  if (old === text) console.log(`unchanged (IANA updated ${updated})`);
-  else { await writeFile(out, text); console.log(`wrote docs/data/protocols.json: 256 numbers, IANA updated ${updated}`); }
+  try {
+    const csv = process.argv[2] ? await readFile(process.argv[2], "utf8") : await fetchText(CSV_URL);
+    const out = new URL("../docs/data/protocols.json", import.meta.url);
+    let old = "";
+    try { old = await readFile(out, "utf8"); } catch { /* first build */ }
+    let updated = null;
+    try { updated = (await fetchText(XML_URL)).match(/<updated>([^<]+)<\/updated>/)?.[1] ?? null; } catch { /* handled below */ }
+    if (!updated) {
+      // Without IANA's date the file would differ from the last build for no reason.
+      const sha = createHash("sha256").update(csv).digest("hex");
+      if (old && JSON.parse(old).csvSha256 === sha) { console.log("unchanged (IANA's date could not be read; the registry itself is identical)"); process.exit(0); }
+      throw new Error("could not read IANA's updated date; nothing written");
+    }
+    const text = JSON.stringify(buildData(csv, updated), null, 1) + "\n";
+    if (old === text) console.log(`unchanged (IANA updated ${updated})`);
+    else { await writeFile(out, text); console.log(`wrote docs/data/protocols.json: 256 numbers, IANA updated ${updated}`); }
+  } catch (error) {
+    console.error(`build.mjs: ${error.message}`);
+    process.exit(1);
+  }
 }
