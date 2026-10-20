@@ -2,7 +2,7 @@
  "source": "IANA, Assigned Internet Protocol Numbers",
  "url": "https://www.iana.org/assignments/protocol-numbers/",
  "updated": "2026-03-09",
- "csvSha256": "e704ee14e69347681b3a6271af02195a9741236074fc311449ebb032101bdf2c",
+ "csvSha256": "ba37fe0a4e01e45fe172f212ade37b908f4d56bbab0be9a97423bcfb9b8271a9",
  "categories": [
   {
    "id": "core",
